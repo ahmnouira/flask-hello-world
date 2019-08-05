@@ -1,5 +1,5 @@
 ## The requiremnets files 
-This folder containes the requirements files 
+This folder contains the requirements files 
 
 ### 1. base.txt 
 

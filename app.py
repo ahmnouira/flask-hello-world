@@ -6,5 +6,9 @@ app = Flask(__name__)
 def index():
     return "<h1> Hello World </h1>"
 
+@app.route('/<name>/')
+def name(name):
+    return "<h1> Hello, <span style='color:red;'>{} </span> ! </h2>".format(name)
+
 if __name__=='__main__':
-    app.run(debug=True, host='0.0.0.0.') 
+    app.run(debug=True, host='0.0.0.0') 

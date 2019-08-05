@@ -1,5 +1,8 @@
-# This is a simple flask application
+# flask-hello-world
+This is a simple flask application 
 
+# Overview
+![hello_ahmed](/img/hello_ahmed.png)
 
 # Running this app
 
@@ -16,7 +19,7 @@ This app is designed to run in different ways:
 4. activate it using `source venv/bin/activate`
 5. `pip install -r requirements.txt` to install the app libaries and it dependencies
 
-#### run the app
+### running the app
 
 After installing, run the server using `python app.py`
 Access the running app in a browser at the URL written to the console (most likely http://localhost:5000)
@@ -28,11 +31,11 @@ Access the running app in a browser at the URL written to the console (most like
 3. run `docker build -t flask-hello-world:latest .` to build the docker image
 4. `docker images` list the local avaible images
 5. run `docker run --name flask_hello_world -d -p 8000:5000 --rm flask-hello-world:latest` to start the container
-6. Navigate to http://localhost:8000 in a browser to see the results. If you want to share it with your local network devices navigate to http://<your-ip-address>:8000
+6. Navigate to http://localhost:8000 in a browser to see the results. If you want to share it with your local network devices navigate to http://[your-ip-address]:8000
 
 ## 3. As a Docker image published in Docker Hub
 Docker Hub is a free service to publicly store available images.
-1. need to install [Docker](https://www.docker.com/)
+1. you need to install only [Docker](https://www.docker.com/)
 2. just run `docker run -d -p 8080:5000 --name flask ahmnouira/flask-hello-world` 
-![my_doker_hub](/img/doker_hub.png)
+![my_doker_hub](/img/docker_hub.png)
 
