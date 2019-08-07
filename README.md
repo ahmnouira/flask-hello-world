@@ -10,6 +10,7 @@ This app is designed to run in different ways:
 1. As a standalone app running on your machine
 2. As a Docker container running locally 
 3. As a Docker image published in Docker Hub
+4. As an application hosted by [IBM Cloud](https://https://www.ibm.com/cloud) 
 
 ## 1. As a standalone app
 
@@ -37,5 +38,21 @@ Access the running app in a browser at the URL written to the console (most like
 Docker Hub is a free service to publicly store available images.
 1. you need to install only [Docker](https://www.docker.com/)
 2. just run `docker run -d -p 8080:5000 --name flask ahmnouira/flask-hello-world` 
+
 ![my_doker_hub](/img/docker_hub.png)
+
+## 4. As an application hosted by IBM Cloud 
+ :octocat: Befor you begin:
+
+* [IBM Cloud account](https://cloud.ibm.com/registration) 
+* install [IBM Cloud CLI](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) by running `curl -sL https://ibm.biz/idt-installer | bash` 
+
+1. clone the repository by running  `git clone https://github.com/AhmNouira/flask-hello-world` 
+2. `cd flask-hello-world` 
+2. run `bx login` to login to your IBM cloud account and enter your email and password
+3. `bx target --cf ` to target the Cloud Foundary 
+4. `bx cf push` to push the application to IBM Cloud
+5. if you found any error run `bx cf logs <your-app-name> --recent ` to see the troubleshoot
+
+![ibm_cloud](/img/ibm_cloud.png) 
 
