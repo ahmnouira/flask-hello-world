@@ -42,17 +42,20 @@ Docker Hub is a free service to publicly store available images.
 ![my_doker_hub](/img/docker_hub.png)
 
 ## 4. As an application hosted by IBM Cloud 
- :octocat: Befor you begin:
+ :octocat: Before you begin, verify that you have completed the below steps:
 
-* [IBM Cloud account](https://cloud.ibm.com/registration) 
-* install [IBM Cloud CLI](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) by running `curl -sL https://ibm.biz/idt-installer | bash` 
+* you have access to an [IBM Cloud account](https://cloud.ibm.com/registration). 
+* the [IBM Cloud CLI](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) is installed in your workstation.
 
 1. clone the repository by running  `git clone https://github.com/AhmNouira/flask-hello-world` 
 2. `cd flask-hello-world` 
 2. run `bx login` to login to your IBM cloud account and enter your email and password
 3. `bx target --cf ` to target the Cloud Foundary 
+To check the default organization and space to which you have access, go to https://cloud.ibm.com/account/cloud-foundry.
 4. `bx cf push` to push the application to IBM Cloud
-5. if you found any error run `bx cf logs <your-app-name> --recent ` to see the troubleshoot
-
+5. if you found any error run `bx cf logs flask-hello-world --recent ` to see the troubleshoot
+6. check whether your app is running `bx cf app flask-hello-world`
+7. to explore how your app directories are structured `bx cf ssh flask-hello-world`
+__Visit my [site](http://flask-hello-world.eu-gb.mybluemix.net)__
 ![ibm_cloud](/img/ibm_cloud.png) 
 
