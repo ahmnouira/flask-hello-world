@@ -56,6 +56,6 @@ To check the default organization and space to which you have access, go to http
 5. if you found any error run `bx cf logs flask-hello-world --recent ` to see the troubleshoot
 6. check whether your app is running `bx cf app flask-hello-world`
 7. to explore how your app directories are structured `bx cf ssh flask-hello-world`
-__Visit my [site](http://flask-hello-world.eu-gb.mybluemix.net)__
+
 ![ibm_cloud](/img/ibm_cloud.png) 
 
