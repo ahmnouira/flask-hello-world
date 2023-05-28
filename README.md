@@ -26,7 +26,7 @@ This app is designed to run in different ways:
 ### running the app
 
 After installing, run the server using `python app.py`
-Access the running app in a browser at the URL written to the console (most likely <http://localhost:5000>)
+Access the running app in a browser at the URL written to the console (most likely [http://localhost:5000])
 
 ## 2. As a Docker container running on your machine
 
@@ -35,7 +35,7 @@ Access the running app in a browser at the URL written to the console (most like
 3. run `docker build -t flask-hello-world:latest .` to build the docker image
 4. `docker images` list the local available images
 5. run `docker run --name flask_hello_world -d -p 8000:5000 --rm flask-hello-world:latest` to start the container
-6. Navigate to <http://localhost:8000> in a browser to see the results. If you want to share it with your local network devices navigate to http://[your-ip-address]:8000
+6. Navigate to [http://localhost:8000] in a browser to see the results. If you want to share it with your local network devices navigate to http://[your-ip-address]:8000
 
 ## 3. As a Docker image published in Docker Hub
 

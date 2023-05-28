@@ -1,9 +1,7 @@
-## The requiremnets files 
-This folder contains the requirements files 
+# The requirements files
 
-### 1. base.txt 
+This folder contains the requirements files
 
+## 1. base.txt
 
-### 2. docker.txt 
- 
-
+## 2. docker.txt
