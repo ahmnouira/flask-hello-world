@@ -26,7 +26,7 @@ This app is designed to run in different ways:
 ### running the app
 
 After installing, run the server using `python app.py`
-Access the running app in a browser at the URL written to the console (most likely [http://localhost:5000])
+Access the running app in a browser at the URL written to the console (most likely [http://localhost:5000](http://localhost:50000))
 
 ## 2. As a Docker container running on your machine
 
@@ -35,7 +35,7 @@ Access the running app in a browser at the URL written to the console (most like
 3. run `docker build -t flask-hello-world:latest .` to build the docker image
 4. `docker images` list the local available images
 5. run `docker run --name flask_hello_world -d -p 8000:5000 --rm flask-hello-world:latest` to start the container
-6. Navigate to [http://localhost:8000] in a browser to see the results. If you want to share it with your local network devices navigate to http://[your-ip-address]:8000
+6. Navigate to [http://localhost:8000](http://localhost:8000) in a browser to see the results. If you want to share it with your local network devices navigate to *http://[your-ip-address]:8000*
 
 ## 3. As a Docker image published in Docker Hub
 
@@ -64,3 +64,29 @@ To check the default organization and space to which you have access, go to <htt
 8. to explore how your app directories are structured `bx cf ssh flask-hello-world`
 
 ![ibm_cloud](/img/ibm_cloud.png)
+
+## 5. Push a new image
+
+Login to the docker.io using the access token
+
+```bash
+docker login -u ahmnouira docker.io     
+```
+
+Build and tag
+
+```bash
+docker build -t flask-hello-world:latest .
+```
+
+Tag it as per the docker hub repository name
+
+```bash
+docker tag flask-hello-world:latest ahmnouira/flask-hello-world:latest
+```
+
+Push the a new image:
+
+```bash
+docker image push ahmnouira/flask-hello-world:latest  
+```
