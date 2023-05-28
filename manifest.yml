@@ -1,10 +1,8 @@
 applications:
-- path: .
-#  host: flask-hello-world
-  random_route: True
-  name: flask-hello-world
-  domaine: mybluemix.net
-  memory: 128M
-  disk_quota: 128M
-  
- 
+  - path: .
+    #  host: flask-hello-world
+    random_route: True
+    name: flask-hello-world
+    domaine: mybluemix.net
+    memory: 128M
+    disk_quota: 128M

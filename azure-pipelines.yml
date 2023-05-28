@@ -4,28 +4,26 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
 
 trigger:
-- main
+  - main
 
 pool:
   name: boschepoc
 
 variables:
-  name:
-    python.version=3.10
+  name: python.version=3.10
 
 steps:
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Write your PowerShell commands here.
-      
-      cd C:\Users\srahul\Documents\helloworldtest\flask-hello-world
-      python -m venv venv    C:\Users\srahul\Documents\helloworldtest\flask-hello-world\venv\Scripts\Activate.ps1
-      python -m pip install --upgrade pip
-      pip install -r requirements.txt
-  displayName: 'Install dependencies'
+  - task: PowerShell@2
+    inputs:
+      targetType: "inline"
+      script: |
+        # Write your PowerShell commands here.
 
-- script: 
-    START /B python api.py > webapp.txt
-  displayName: 'run app.py'
+        cd C:\Users\srahul\Documents\helloworldtest\flask-hello-world
+        python -m venv venv    C:\Users\srahul\Documents\helloworldtest\flask-hello-world\venv\Scripts\Activate.ps1
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    displayName: "Install dependencies"
+
+  - script: START /B python api.py > webapp.txt
+    displayName: "run app.py"
